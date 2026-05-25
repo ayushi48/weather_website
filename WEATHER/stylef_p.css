@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(to top, #020024,#090979,#00D4FF ); */
+
+}
+
+/* Background gradient layer */
+/* Main background gradient */
+.mid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #020024, #020242, #04046B, #020270); 
+    /* // changfe her */
+    /* background-color: #cbcae7; */
+
+    z-index: -10;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Falling stars container */
+.star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Star */
+.star {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    font-size:2rem;
+    color: #cbcae7;
+    /* background: white; */
+    border-radius: 50%;
+    animation: fall linear infinite;
+    opacity: 1;
+    /* opacity: 0.8; */
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Main container */
+.container {
+    position: relative;
+    z-index: 1;
+    /* padding: 20px; */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header with logo and nav buttons */
+#images {
+
+    background-color: rgba(30, 29, 29, 0.4);
+    /* slightly transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    border-radius: 8px;
+    /* backface-visibility:; */
+    /* opacity: 0.5;
+  z-index: -1; */
+}
+
+#images img {
+    /* margin-left: 2rem; */
+    height: 6rem;
+    width: 9rem;
+    border-radius: 5px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    /* margin-left: 3rem; */
+
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 1rem;
+    /* z-index: 1;
+  opacity: 1; */
+}
+
+.nav-buttons button {
+    /* margin-right: 3rem; */
+    height: 2.5rem;
+    width: 10rem;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    /* font-style: ; */
+    background-color: #313054;
+    transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    color: rgb(213, 216, 118);
+    transition-delay: 60ms;
+    background-color: #1C1C46;
+}
+
+/* Search section styling */
+.search-section {
+
+    border: 2px solid #1C1F72;
+    box-shadow: 0 4px 12px rgba(28, 31, 114, 0.5);
+    border-radius: 10px;
+    justify-self: center;
+    text-align: center;
+    margin-top: 9rem;
+    height: 25rem;
+    width: 80%;
+    color: white;
+    padding: 4rem 0 4rem 0;
+    box-shadow: -10px -10px 15px 3px rgba(28, 31, 114, 0.9);
+
+    /* background: linear-gradient(to left,#020024,#090979,#00D4FF); */
+    background: linear-gradient(to left, rgba(2, 0, 36, 0.4), rgba(9, 9, 121, 0.4), rgba(0, 212, 255, 0.4));
+
+    /* opacity: .5; */
+    /* background-color: aqua; */
+}
+
+.search-section h1 {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 4rem;
+    font-weight: bold;
+
+    margin-bottom: 3rem;
+
+}
+
+/* https://coolsymbol.com/text-decorator.html?style=boldFraktur&text=Preview%20Text */
+/* Search bar container */
+.search-bar {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    /* max-width: 700px; */
+    width: 90%;
+    /* margin: 0 auto; */
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    /* padding: 0 10px; */
+}
+
+/* Input field */
+.search-bar input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #1C1F72;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    /* background-color: #1C1C46; */
+    font-weight: bold;
+    font-style: italic;
+}
+
+#cityInput,
+#first_page_button {
+    background-color: #cbcae7;
+}
+
+.search-btn {
+    transform: translatex(-110%);
+    background-color: #cbcae7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    color: #007BFF;
+}
+
+#error {
+    margin-top: 2rem;
+    height: 30%;
+    width: 90%;
+    display: flex;
+    /* align-items: center; */
+    justify-self: center;
+    /* background-color: aqua; */
+    display: none;
+}
+
+/* ================================================================= */

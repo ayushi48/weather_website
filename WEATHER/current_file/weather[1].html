@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="stylef_p.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Full screen background image -->
+  <div class="mid"></div>
+
+  <!-- Main container content on top -->
+  <div class="container">
+    <!-- Header with logo and buttons -->
+    <div id="images">
+      <img src="./WhatsApp_Image_2025-05-28_at_09.38.45_1f007174-removebg-preview.png" alt="weather-logo">
+      <div class="nav-buttons">
+        <!-- <a href="./w_second.html">helloi</a> -->
+        <button>Find a Forecast</button>
+        <!-- <button><a href="./w_second.html"></a>Find a Forecas</button> -->
+        <button>Maps and Charts</button>
+        <button>Today's Rainfall</button>
+        <button>Weekly Rainfall</button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <!-- Search section styled like the "Find a forecast" box -->
+    <div class="search-section">
+      <h1>Find a forecast</h1>
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search  for  a  place" />
+        <!-- <img src="./photo/icons8-search-24.png" alt="search-icon" /> -->
+        <button class="search-btn" id="first_page_button" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div id="error">
+
+      </div>
+    </div>
+
+
+  </div>
+</body>
+  <script src="./script.js">
+    const input = document.getElementById('cityInput').value
+    console.log(input);
+    
+  </script>
+</html>

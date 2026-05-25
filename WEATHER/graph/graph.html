@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graph Example - Chart.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* padding: 20px; */
+      /* text-align: center; */
+    }
+
+    #chart-container {
+      width: 100%;
+      height: 20rem;
+      max-width: 1500px;
+      /* margin: auto; */
+    }
+    #myChart{
+      height: 80%;
+      width: 40%;
+    }
+  </style>
+</head>
+<body>
+  <h2>Sample Bar Chart</h2>
+  <div id="chart-container">
+    <!-- <canvas id="myChart" width="400" height="200"></canvas> -->
+
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <!-- <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: 'Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(255, 159, 64, 0.5)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script> -->
+</body>
+<script src="./graph.js"></script>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <canvas id="myChart" width="400" height="200" style="height: 300px; width: 300px;"></canvas>
+   <div style="height: 300px; width: 100%; background-color: antiquewhite;">
+  <canvas id="myChart"></canvas>
+</div>
+
+
+</body>
+<script src="./graph.js "></script>
+
+</html> -->

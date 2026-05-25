@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="stylef_p.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <a href="./"></a> -->
+</head>
+
+<body>
+  <!-- Full screen background image -->
+  <div class="mid"></div>
+  <div class="star-field">
+    <div class="star" style="left: 10%; animation-duration: 6s; animation-delay: 0s;">✩</div>
+    <div class="star" style="left: 25%; animation-duration: 8s; animation-delay: 2s;">✩</div>
+    <div class="star" style="left: 40%; animation-duration: 5s; animation-delay: 4s;">✩</div>
+    <div class="star" style="left: 55%; animation-duration: 7s; animation-delay: 1s;">✩</div>
+    <div class="star" style="left: 70%; animation-duration: 9s; animation-delay: 3s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;"></div>
+    <div class="star" style="left: 95%; animation-duration: 6s; animation-delay: 5s;">✩</div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;"></div>
+    <div class="star" style="left: 85%; animation-duration: 6s; animation-delay: 5s;"></div>
+    <div class="star" style="left: 55%; animation-duration: 6s; animation-delay: 5s;"></div>
+    <div class="star" style="left: 35%; animation-duration: 6s; animation-delay: 5s;"></div>
+    <div class="star" style="left: 05%; animation-duration: 6s; animation-delay: 5s;"></div>
+  </div>
+
+
+  <!-- Main container content on top -->
+  <div class="container">
+    <!-- Header with logo and buttons -->
+    <div id="images">
+      <img src="./photo/WhatsApp_Image_2025-05-28_at_09.38.45_1f007174-removebg-preview.png" alt="weather-logo">
+      <div class="nav-buttons">
+        <!-- <a href="./w_second.html">helloi</a> -->
+        <button>Find a Forecast</button>
+        <!-- <button><a href="./w_second.html"></a>Find a Forecas</button> -->
+        <button>Maps and Charts</button>
+        <button>Today's Rainfall</button>
+        <button>Weekly Rainfall</button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <!-- Search section styled like the "Find a forecast" box -->
+    <div class="search-section">
+      <h1>Find a forecast</h1>
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search  for  a  place" />
+        <!-- <img src="./photo/icons8-search-24.png" alt="search-icon" /> -->
+        <button class="search-btn" id="first_page_button" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div id="error">
+
+      </div>
+    </div>
+    <!-- <div id="seven_week"> -->
+
+  </div>
+
+
+  </div>
+</body>
+<script src="./script.js">
+
+
+  const starField = document.querySelector(".star-field");
+  for (let i = 0; i < 50; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star");
+    star.style.left = Math.random() * 100 + "%";
+    star.style.animationDuration = 4 + Math.random() * 4 + "s";
+    star.style.animationDelay = Math.random() * 5 + "s";
+    starField.appendChild(star);
+  }
+
+
+  const input = document.getElementById('cityInput').value
+  console.log(input);
+
+</script>
+
+</html>

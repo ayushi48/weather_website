@@ -1,0 +1,399 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gauge-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 15px;
+            width: 170px;
+            height: 110px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            font-family: sans-serif;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+
+        .value {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4993ff;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        .icon img {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gauge-container">
+        <div class="label">Wind</div>
+        <canvas id="windGauge" width="170" height="90"></canvas>
+        <div class="value">8 km/h</div>
+        <div class="icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/wind.png" alt="wind icon" />
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('windGauge').getContext('2d');
+
+    const windSpeed = 15; // your wind speed
+    const maxSpeed = 40;
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Wind', 'Remaining'],
+            datasets: [{
+                data: [windSpeed, maxSpeed - windSpeed],
+                backgroundColor: ['#4b9bff', '#e0e0e0'],
+                borderWidth: 0,
+                cutout: '75%',
+                rotation: -90,
+                circumference: 180
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
+            }
+        }
+    });
+</script>
+
+</html>
+ -->
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feels Like Temperature</title>
+    <style>
+        .feels-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 15px;
+            width: 260px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .feels-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .icon {
+            background-color: #4993ff;
+            border-radius: 50%;
+            padding: 6px;
+        }
+
+        .icon img {
+            width: 14px;
+            height: 14px;
+        }
+
+        .temp-value {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .scale {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: gray;
+            margin-bottom: 4px;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar .fill {
+            background-color: #4b9bff;
+            height: 100%;
+            width: 0%;
+            border-radius: 10px 0 0 10px;
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="feels-container" >
+        <div class="feels-header">
+            <span class="label">Feels like</span>
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/24/ffffff/temperature.png" alt="temp icon" />
+            </div>
+        </div>
+        <div class="temp-value" id="tempValue">--°</div>
+        <div class="scale">
+            <span>0°</span>
+            <span>25°</span>
+            <span>50°</span>
+        </div>
+        <div class="progress-bar">
+            <div class="fill" id="fill_bar"></div>
+        </div>
+    </div>
+
+    <script>
+        const feelsLike = 30; // You can replace this with dynamic API value
+        const maxTemp = 50; // Max scale
+        const percent = (feelsLike / maxTemp) * 100;
+
+        document.getElementById("tempValue").textContent = `${feelsLike}°`;
+        document.getElementById("fill_bar").style.width = percent + "%";
+    </script>
+</body>
+
+</html> -->
+
+<!-- UV : https://img.icons8.com/ios-filled/24/ffffff/sun--v1.png -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Humidity Card</title>
+  <style>
+    .humidity-container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 15px;
+      width: 260px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      font-family: sans-serif;
+    }
+
+    .humidity-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .icon {
+      background-color: #4993ff;
+      border-radius: 50%;
+      padding: 6px;
+    }
+
+    .icon img {
+      width: 14px;
+      height: 14px;
+    }
+
+    .humidity-value {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .percent {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .level {
+      font-size: 14px;
+      color: gray;
+      text-transform: capitalize;
+    }
+
+    .humidity-zones {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .bar {
+      width: 60px;
+      height: 8px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 10px;
+      transition: width 0.4s ease;
+    }
+
+    .good .fill {
+      background-color: #66bb6a;
+    }
+
+    .normal .fill {
+      background-color: #fdd835;
+    }
+
+    .bad .fill {
+      background-color: #ef5350;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="humidity-container">
+    <div class="humidity-header">
+      <span class="label">Humidity</span>
+      <div class="icon">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/hygrometer.png" alt="humidity icon" />
+      </div>
+    </div>
+
+    <div class="humidity-value">
+      <span class="percent" id="humidity-percent">--%</span>
+      <span class="level" id="humidity-level">--</span>
+    </div>
+
+    <div class="humidity-zones">
+      <div class="zone good">
+        <span>good</span>
+        <div class="bar">
+          <div class="fill"></div>
+        </div>
+      </div>
+      <div class="zone normal">
+        <span>normal</span>
+        <div class="bar">
+          <div class="fill"></div>
+        </div>
+      </div>
+      <div class="zone bad">
+        <span>bad</span>
+        <div class="bar">
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Generate a random humidity percentage between 0 and 100
+    const humidity = 66 // 0 - 100
+
+    // Determine the level based on humidity value
+    let level = '';
+    if (humidity < 40) {
+      level = 'good';
+    } else if (humidity < 70) {
+      level = 'normal';
+    } else {
+      level = 'bad';
+    }
+
+    // Set the text values
+    document.getElementById('humidity-percent').innerText = humidity + "%";
+    document.getElementById('humidity-level').innerText = level;
+
+    // Set fixed widths for each zone bar
+    document.querySelector('.good .fill').style.width = '40%';
+    document.querySelector('.normal .fill').style.width = '30%';
+    document.querySelector('.bad .fill').style.width = '30%';
+
+    // Highlight the current level bar by filling it fully
+    document.querySelectorAll('.zone').forEach(zone => {
+      if (zone.classList.contains(level)) {
+        zone.querySelector('.fill').style.width = '100%';
+      }
+    });
+  </script>
+</body>
+</html> -->

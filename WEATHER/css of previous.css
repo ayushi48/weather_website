@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(216, 199, 199, 0.92);
+}
+
+#sec_container {
+    /* position: absolute; */
+    justify-self: center;
+    margin-top: 1%;
+    height: 95%;
+    width: 98%;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #020024, #0d0d9d, #016cb9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    /* z-index: 1; */
+}
+
+#bar1 {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    margin: .7rem .3rem;
+    border: .1rem solid white;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+.bar1_line {
+    width: 80%;
+    opacity: .2;
+    box-shadow: 3px 2px 5px white;
+    border-radius: 10px;
+    margin-bottom: .8rem;
+    margin-top: .9rem;
+}
+
+/* ===================================================== */
+#bar1_air_quality {
+    height: 8%;
+    width: 95%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: .1rem solid white;
+    font-size: 1.1rem;
+}
+
+/* 
+#bar1_air_quality_img {
+    margin-left: 2%;
+    height: auto;
+    width: 2.5rem;
+} */
+
+
+#bar1_air_quality_img {
+    height: auto;
+    max-width: 2.5rem;
+    width: 100%;
+    margin: 0.5rem 0 0 2%;
+}
+
+#bar1_air_quality_indicator {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-left: 9%;
+    /* margin: .5rem; */
+}
+
+#bar1_air_quality_label {
+    margin: 0 4% 0 2%;
+}
+
+#bar1_air_quality_value_num,
+#bar1_air_quality_value {
+    margin-left: 11%;
+}
+
+/* #bar1_air_quality_label,
+#bar1_air_quality_value_num,
+#bar1_air_quality_value {
+    margin: 0.5rem 0 0 9%;
+    text-align: center;
+} */
+
+/* ============================================================================ */
+
+#bar2 {
+    border-radius: 20px;
+    width: 54%;
+    margin: .7rem .3rem;
+    border: .1rem solid white;
+}
+
+#bar3 {
+    width: 21%;
+    margin: .7rem .3rem;
+    border: .1rem solid white;
+    border-radius: 20px;
+}
+
+#bar1_search button1 {
+    background-color: #016cb9;
+}
+
+#bar1_search {
+    /* display: flex;
+    padding: 1rem 0;
+    /* font-size: large; 
+    justify-content: center;
+    align-items: center; */
+    /* position: relative; */
+    /* margin-left: 100rem; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    margin: 1rem auto;
+}
+
+#cityInput {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* right: 5px; */
+    transform: translatex(-150%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    color: #007BFF;
+}
+
+#bar1_search input {
+    width: 70%;
+    height: 1.6rem;
+    border: none;
+}
+
+
+#bar1_symbol {
+    /* justify-self: center; */
+    height: 25%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 2%;
+    margin-top: 1.5rem;
+    /* flex-direction: column; */
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ccc; */
+}
+
+#weatherIcon {
+    height: 12rem;
+    width: 12rem;
+    /* justify-content: center; */
+}
+
+#bar1_tem {
+    /* margin-top: .5rem; */
+    height: 55%;
+    width: 80%;
+    /* gap: 7rem; */
+    /* background-color: #ccc; */
+}
+
+#bar1_tem #Temperature {
+    /* margin-top: 5rem; */
+    color: #ccc;
+    font-size: 2.5rem;
+}
+
+#bar1_tem #day {
+    color: #ccc;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+}
+
+#bar1_tem #date {
+    color: #ccc;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+}
+
+#bar1_day {
+    margin-top: 1rem;
+    height: 10%;
+    width: 80%;
+    background-color: #ccc;
+}
+
+/* cart */
+#temp_forecast {
+    color: white;
+    font-size: 1.8rem;
+
+}
+
+#temp_forecast {
+    text-align: center;
+}
+
+/*  it is use to give b_colour to the graph*/
+#tempChart {
+    background-color: #045699;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    margin: 1%;
+    border-radius: 30px;
+}
+
+/* details 1 and it three boxes */
+
+#bar2_inner_box2 {
+    height: 56.5%;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 1%; */
+    /* justify-content: space-evenly; */
+}
+
+#details1 {
+    height: 49%;
+    width: 100%;
+    /* background-color: aqua; */
+    /* margin-bottom: 1%; */
+    gap: 3.1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deatils2 {
+    height: 49%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 3.1%;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: ; */
+    /* margin-bottom: 1%; */
+}
+
+.details1_info {
+    height: 90%;
+    width: 29%;
+    border: .15rem solid white;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    /* background-color: #333; */
+}
+
+#bar2_inner_box2_heading {
+    font-size: 1rem;
+    margin-top: 1%;
+    margin-bottom: .5%;
+    margin-left: 2.5rem;
+    color: #ccc;
+}
+
+#details1_box2 {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+#details1_box2_label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 3%;
+    margin-left: 1rem;
+}
+
+#details1_box2_icon {
+    position: absolute;
+    top: .5rem;
+    right: .7rem;
+    /* background-color: #4993ff; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* padding: 9px; */
+}
+
+#details1_box2_icon img {
+    width: 3.5rem;
+    height: 3rem;
+}
+
+#windGauge {
+    /* margin-right: 30px; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    justify-self: center;
+}
+
+/*================================ box 3 of details 3 =======================*/
+
+#details2_box3_icon {
+    margin-top: .8rem;
+    margin-right: .8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* background-color: #4993ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 9px;
+}
+
+#details2_box3_label {
+    margin-top: 1.2rem;
+
+    margin-left: .7rem;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#details2_box3_icon img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.chance_of_rain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rainValue {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .6rem 0;
+}
+
+.rainValue_scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .79rem;
+    color: rgb(89, 87, 87);
+    margin-bottom: .2rem;
+    margin: .1rem .25rem;
+}
+
+.rainValue_progress_bar {
+    background-color: #e0e0e0;
+    height: .45rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#fill_bar_rain {
+    background-color: #4b9bff;
+    height: 100%;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.8s ease-in-out;
+    /* transition: width 3s ease-in-out; */
+}
+
+/* ========================  box 2 of details 2  ============================ */
+
+#details2_box2_icon {
+    margin-top: .8rem;
+    margin-right: .8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* background-color: #4993ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 9px;
+}
+
+#details2_box2_label {
+    margin-top: 1.2rem;
+
+    margin-left: .7rem;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#details2_box2_icon img {
+    width:  3.5rem;
+    height: 3rem;
+}
+
+.chance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#feels_like {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .6rem 0;
+}
+
+.temp_Value_scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .79rem;
+    color: rgb(89, 87, 87);
+    margin-bottom: .2rem;
+    margin: .1rem .25rem;
+}
+
+.temp_Value_progress_bar {
+    background-color: #e0e0e0;
+    height: .45rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#fill_bar_feel_like {
+    background-color: #4b9bff;
+    height: 100%;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.8s ease-in-out;
+    /* transition: width 1.5s ease-in-out; */
+}
+
+/* ============================================================================= */
+#details2_box1_icon {
+    margin-top: .8rem;
+    margin-right: .8rem;
+    width: 4rem;
+    height: 3rem;
+    /* background-color: #4993ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* padding: 9px; */
+}
+
+#details2_box1_label {
+    margin-top: 1.1rem;
+
+    margin-left: .7rem;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* #details2_box1_icon img {
+    width: 1.2rem;
+    height: 1.2rem;
+} */
+
+
+#uv_like {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .3rem 0;
+}
+
+#uv_Value_scale {
+    display: flex;
+    font-size: .8rem;
+    margin: 0 .2rem;
+    justify-content: space-between;
+}
+
+#slider {
+    margin-top: .2rem;
+    margin-bottom: .8rem;
+    height: 5%;
+    padding: 0 .1rem;
+    display: flex;
+    gap: 9.5%;
+    /* justify-content: space-between; */
+}
+
+.uv_Value_progress_bar {
+    width: 12%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+#uv_fill1,
+#uv_fill2,
+#uv_fill3,
+#uv_fill4,
+#uv_fill5 {
+    border-radius: 10px;
+    height: 100%;
+    width: 0;
+    background-color: #4b9bff;
+    transition: width 0.8s ease-in-out;
+}
+
+/* ======================== details1 box1  ======================================== */
+
+#details1_box1_icon {
+    margin-top: .8rem;
+    margin-right: .8rem;
+    width: 2.7rem;
+    height: 2.6rem;
+    /* background-color: #4993ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#details1_box1_label {
+    margin-top: 1.2rem;
+    margin-left: .7rem;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#humidity_value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .6rem 0;
+}
+
+.humidity_value_scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .79rem;
+    color: rgb(89, 87, 87);
+    margin-bottom: .2rem;
+    margin: .1rem .9rem;
+}
+
+#humidity_sclider {
+    margin-top: .2rem;
+    margin-bottom: .8rem;
+    height: 5%;
+    padding: 0 .1rem;
+    display: flex;
+    gap: 9.5%;
+}
+
+.humidity_Value_progress_bar {
+    background-color: #e0e0e0;
+    height: 100%;
+    width: 28%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#fill_bar_humidity_value1,
+#fill_bar_humidity_value2,
+#fill_bar_humidity_value3 {
+    background-color: #4b9bff;
+    height: 100%;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.8s ease-in-out;
+}
+
+
+
+
+/* ************************************************************************ */
+
+
+#bar3_line{
+    width: 90%;
+    opacity: .2;
+    box-shadow: 2px 2px 3px white;
+}
+
+
+
+/* =============================== bar 3 ================================ */
+
+#bar3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#line {
+    width: 100%;
+}
+
+#bar3_location {
+    height: 25%;
+    width: 95%;
+    border: .2rem solid white;
+    border-radius: 20px;
+    margin-top: 4%;
+}
+
+#bar3_day {
+    height: 70%;
+    width: 96%;
+    /* border: .2rem solid white; */
+    display: flex;
+    gap: 1.3%;
+    flex-direction: column;
+}
+
+.bar3_day_info_box {
+    height: 13%;
+    border: .1rem solid white;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.bar3_day_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 35%;
+    margin-top: 1.5%;
+    margin-left: 3%;
+}
+
+.bar3_day_img img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.imgday1 {
+    display: flex;
+    width: 60%;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3%;
+}
+
+.bar3_day_bar {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 7%;
+    margin-bottom: 2%;
+}
+
+.bar3_temp {
+    height: 15%;
+    width: 50%;
+    margin-top: 1%;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+#bar3_temp_fill1,
+#bar3_temp_fill2,
+#bar3_temp_fill3,
+#bar3_temp_fill4,
+#bar3_temp_fill5,
+#bar3_temp_fill6,
+#bar3_temp_fill7 {
+    height: 100%;
+    width: 0;
+    background-color: #3b81d7;
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+}
+
+
+
+
+/* ======================humidity_Value_Precipitation_bar======================= */
+
+#Precipitation_sclider {
+    margin-top: .2rem;
+    margin-bottom: .8rem;
+    height: 5%;
+    padding: 0 .1rem;
+    display: flex;
+    gap: 3.1%;
+}
+
+.humidity_Value_Precipitation_bar {
+    background-color: #e0e0e0;
+    height: 100%;
+    width: 28%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Precipitation_value_scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    padding: 0 1.8%;
+}
+
+#Precipitation_value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .6rem 0;
+}
+
+#fill_bar_Precipitation_value1,
+#fill_bar_Precipitation_value2,
+#fill_bar_Precipitation_value3,
+#fill_bar_Precipitation_value4,
+#fill_bar_Precipitation_value5,
+#fill_bar_Precipitation_value6,
+#fill_bar_Precipitation_value7,
+#fill_bar_Precipitation_value8,
+#fill_bar_Precipitation_value9,
+#fill_bar_Precipitation_value10 {
+    height: 100%;
+    width: 0%;
+    background-color: #3b81d7;
+    border-radius: 15px;
+    transition: width 0.8s ease-in-out;
+}
+
+/* =============================== sun timing ============================== */
+
+.sun {
+    margin-top: 3%;
+    height: 15%;
+    width: 95%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1.13rem;
+    font-weight: 400;
+}
+
+.sun_img {
+    width: 26%;
+    height: auto;
+    max-width: 3.125em; /* limit the size for larger screens */
+    border-radius: 50%;
+    aspect-ratio: 1 / 1; /* keep it square */
+}
+
+.img_label {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 5%;
+}
+
+.sun_time {
+    display: flex;
+    gap: 25%;
+    align-items: center;
+}
+
+#sun_line {
+    width: 80%;
+    align-self: center;
+}
+
+/* =====================presure ====================== */
+
+#presure {
+    margin-top: 3%;
+    height: 8%;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.33rem;
+    font-weight: 350;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#presure_img {
+    height: 3rem;
+    width: 5rem;
+    border-radius: 15px;
+}
+
+#presure_value {
+    margin-left: 31%;
+}
+
+/* ==================moon========================= */
+#moon {
+
+    margin-top: 3%;
+    height: 8%;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 350;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#moon_img {
+    height: 70%;
+    width: 13%;
+    margin-right: 3%;
+}
+
+#moon_value {
+    margin-left: 8%;
+}
+
+/* ==========================weather_text======================== */
+
+#weather_text_greeding {
+    height: 5%;
+    width: 90%;
+    /* background-color: #016cb9; */
+    /* margin-bottom: 4%; */
+    margin-top: 3%;
+    color: white;
+    font-size: 1.4rem;
+}
+
+#weather_text {
+    height: 5%;
+    width: 90%;
+    /* background-color: #016cb9; */
+    margin-bottom: 1%;
+    /* margin-top: 4%; */
+    color: white;
+    font-size: 1.16rem;
+}
+
+/* =============================================================== */
+
+#bar3_location{
+    /* position: absolute  ; */
+    background-image: url(N1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 2.2rem;
+    text-shadow: 1px 3px 4px black;
+}
+
+/* #message_bar3{
+    color: #020024;
+    z-index: 2;
+} */

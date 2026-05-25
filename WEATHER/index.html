@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="time"></div>
+  <div class="container1">
+    <!-- <img id="icon1" src="./photo/1st_page.jpg" alt="Weather Icon" /> -->
+    <div id="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name" required />
+      <button id="getWeatherBtn">Get Weather</button>
+    </div>
+  </div>
+
+  <div class="container2" id="container">
+    <div id="weatherResult" class="weather-box hidden">
+      <h2 id="location"></h2>
+      <p id="condition"></p>
+      <img id="icon" src="./photo/images.png" alt="Weather Icon" />
+      <p><strong>Temperature:</strong> <span id="tempC"></span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind Speed:</strong> <span id="wind"></span> km/h</p>
+      <p><strong>Local Time:</strong> <span id="localTime"></span></p>
+    </div>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

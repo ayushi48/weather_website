@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+    <link rel="stylesheet" href="./w_second.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body id="body2">
+    <div id="sec_container">
+        <!-- ============================================================ -->
+        <div id="bar1">
+            <div id="bar1_search">
+                <input type="text" id="cityInput" placeholder="Search city...">
+                <button class="search-btn" id="first_page_button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="error"></div>
+
+            <div id="bar1_symbol">
+                <img id="weatherIcon" alt="Weather Icon">
+                <div id="bar1_tem">
+                    <strong id="Temperature">C</strong>
+                    <p id="day"></p>
+                    <p id="date"></p>
+                </div>
+            </div>
+            <!-- <hr class="bar1_line"> -->
+            <div id="weather_text_greeding">Good Day,</div>
+            <div id="weather_text">The weather today is Good </div>
+            <hr class="bar1_line">
+            <!-- ========================== air quality ============================== -->
+            <div id="bar1_air_quality">
+                <img id="bar1_air_quality_img" src="./download.jpg" alt="air">
+                <p id="bar1_air_quality_label">Air Quality</p>
+                <p id="bar1_air_quality_value_num">----</p>
+                <p id="bar1_air_quality_value">-------</p>
+                <div id="bar1_air_quality_indicator"></div>
+            </div>
+            <!-- ========================================= -->
+            <div class="sun">
+                <div class="sun_time">
+                    <div class="img_label">
+                        <img src="./sunrise.png" alt="" class="sun_img">
+                        <p class="sun_label">Sun Rise Time</p>
+                    </div>
+                    <p id="sun_rise_label">----AM</p>
+                </div>
+                <hr id="sun_line">
+                <div class="sun_time">
+                    <div class="img_label">
+                        <img src="./sunset.png" alt="" class="sun_img">
+                        <p class="sun_label">Sun Set Time</p>
+                    </div>
+                    <p id="sun_set_label">----PM</p>
+                </div>
+            </div>
+            <!-- =========================================== -->
+            <div id="presure">
+                <img src="./presure2.jpg" alt="img...." id="presure_img">
+                <p id="presure_label">Presure</p>
+                <p id="presure_value">------mb</p>
+            </div>
+
+            <!-- =========================================== -->
+         <div id="moon">
+                <img src="./moon.jpg" alt="img...." id="moon_img">
+                <p id="presure_label">Moon Phase</p>
+                <p id="moon_value">------</p>
+            </div>
+
+            <!-- =========================================== -->
+        </div>
+        <!-- ================================================================ -->
+        <div id="bar2">
+            <div id="bar2_inner_box1">
+                <p id="temp_forecast">Hourly Temperature Forecast</p>
+                <canvas id="tempChart" width="550" height="150"></canvas>
+            </div>
+            <div id="bar2_inner_box2">
+                <h1 id="bar2_inner_box2_heading">More Details of Today's Weather</h1>
+                <div id="details1">
+                    <!-- =========================================================================== -->
+                    <div id="details1_box1" class="details1_info">
+                        <div class="chance">
+                            <span id="details1_box1_label">Humidity</span>
+                            <!-- <div id="details1_box1_icon"> -->
+                            <img id="details1_box1_icon" src="./humiditylogo.jpg"
+                                alt="wind icon" />
+                            <!-- </div> -->
+                        </div>
+                        <div class="humidity-value" id="humidity_value">--%</div>
+                        <div class="humidity_value_scale">
+                            <span>good</span>
+                            <span>normal</span>
+                            <span>bad</span>
+                        </div>
+                        <div id="humidity_sclider">
+                            <div class="humidity_Value_progress_bar">
+                                <div class="fill" id="fill_bar_humidity_value1"></div>
+                            </div>
+                            <div class="humidity_Value_progress_bar">
+                                <div class="fill" id="fill_bar_humidity_value2"></div>
+                            </div>
+                            <div class="humidity_Value_progress_bar">
+                                <div class="fill" id="fill_bar_humidity_value3"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--================================== wind ==============================================-->
+                    <div id="details1_box2" class="details1_info">
+                        <div id="details1_box2_label">Wind</div>
+                        <canvas id="windGauge" width="170" height="90"></canvas>
+                        <div id="details1_box2_icon">
+                            <img src="./dbox2.png" alt="wind icon" />
+                        </div>
+                    </div>
+                    <!-- ==================================================================================== -->
+                    <div id="details1_box3" class="details1_info">
+                        <div class="chance">
+                            <span id="details1_box1_label">Precipitation</span>
+                            <img id="details1_box1_icon" src="./Precipitation.jpg"
+                                alt="wind icon" />
+                        </div>
+                        <div class="humidity-value" id="Precipitation_value">--mm</div>
+                        <div class="Precipitation_value_scale">
+                            <span>00</span>
+                            <span>10</span>
+                            <span>20</span>
+                            <span>30</span>
+                            <span>40</span>
+                            <span>50</span>
+                            <span>60</span>
+                            <span>70</span>
+                            <span>80</span>
+                            <span>90</span>
+                            <span>100</span>
+                        </div>
+                        <div id="Precipitation_sclider">
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value1"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value2"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value3"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value4"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value5"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value6"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value7"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value8"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value9"></div>
+                            </div>
+                            <div class="humidity_Value_Precipitation_bar">
+                                <div class="fill" id="fill_bar_Precipitation_value10"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==================================================================================== -->
+                </div>
+
+                <!-- ========================================================================== -->
+                <div id="deatils2">
+                    <!-- ======================================================================== -->
+                    <div id="details2_box1" class="details1_info">
+                        <div class="chance">
+                            <span id="details2_box1_label">UV Index</span>
+                            <img id="details2_box1_icon"
+                                src='https://static.vecteezy.com/system/resources/thumbnails/008/992/569/small/uv-index-level-sun-numbers-solar-protection-scale-of-sun-exposure-risk-from-low-medium-high-very-high-and-extreme-sunblock-from-sunshine-and-solar-burn-hot-solar-energy-for-tan-vector.jpg'
+                                alt="sun icon" />
+                            <!-- <div id="details2_box1_icon">
+                            </div> -->
+                        </div>
+                        <div class="uv-value" id="uv_like">--medium</div>
+                        <div id="uv_Value_scale">
+                            <div class="uv_scale">0-2</div>
+                            <div class="uv_scale">2-4</div>
+                            <div class="uv_scale">4-7</div>
+                            <div class="uv_scale">7-10</div>
+                            <div class="uv_scale">10+</div>
+                        </div>
+                        <div id="slider">
+                            <div class="uv_Value_progress_bar">
+                                <div class="fill_uv" id="uv_fill1"></div>
+                            </div>
+
+                            <div class="uv_Value_progress_bar">
+                                <div class="fill_uv" id="uv_fill2"></div>
+                            </div>
+
+                            <div class="uv_Value_progress_bar">
+                                <div class="fill_uv" id="uv_fill3"></div>
+                            </div>
+
+                            <div class="uv_Value_progress_bar">
+                                <div class="fill_uv" id="uv_fill4"></div>
+                            </div>
+
+                            <div class="uv_Value_progress_bar">
+                                <div class="fill_uv" id="uv_fill5"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ======================================================================== -->
+                    <div id="details2_box2" class="details1_info">
+                        <div class="chance">
+                            <span id="details2_box2_label">Feels Like</span>
+                            <div id="details2_box2_icon">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/temperature.png"
+                                    alt="wind icon" />
+                            </div>
+                        </div>
+                        <div class="rain-value" id="feels_like">--°</div>
+                        <div class="temp_Value_scale">
+                            <span>0°</span>
+                            <span>25°</span>
+                            <span>50°</span>
+                        </div>
+                        <div class="temp_Value_progress_bar">
+                            <div class="fill" id="fill_bar_feel_like"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================================================================ -->
+
+                    <div class="details1_info" id="details2_box3">
+                        <div class="chance_of_rain">
+                            <span id="details2_box3_label">Chance of Rain</span>
+                            <div id="details2_box3_icon">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/rain.png" alt="wind icon" />
+                            </div>
+                        </div>
+                        <div class="rain-value" id="rainValue">--%</div>
+                        <div class="rainValue_scale">
+                            <span>0%</span>
+                            <span>25%</span>
+                            <span>50%</span>
+                            <span>75%</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="rainValue_progress_bar">
+                            <div class="fill" id="fill_bar_rain"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================================== -->
+        <div id="bar3">
+            <div id="location3"></div>
+            <!-- <hr id="line"> -->
+            <!-- ============================================================================== -->
+            <!-- <div id="bar3_day">
+                
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="./w_second.js"></script>
+<script src="./script.js"></script>
+
+</html>
+
+
+
+
+
+
+<!-- 
+
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day1">Today</p>
+        <div class="imgday1">
+            <img id="day1_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day1">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day1">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill1"></div>
+        </div>
+        <p id="max_tem_day1">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day2">Today</p>
+        <div class="imgday1">
+            <img id="day2_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day2">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day2">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill2"></div>
+        </div>
+        <p id="max_tem_day2">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day3">Today</p>
+        <div class="imgday1">
+            <img id="day3_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day3">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day3">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill3"></div>
+        </div>
+        <p id="max_tem_day3">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day4">Today</p>
+        <div class="imgday1">
+            <img id="day4_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day4">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day4">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill4"></div>
+        </div>
+        <p id="max_tem_day4">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day5">Today</p>
+        <div class="imgday1">
+            <img id="day5_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day5">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day5">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill5"></div>
+        </div>
+        <p id="max_tem_day5">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day6">Today</p>
+        <div class="imgday1">
+            <img id="day6_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day6">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day6">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill6"></div>
+        </div>
+        <p id="max_tem_day6">--°</p>
+    </div>
+</div>
+=============================================================================
+<div class="bar3_day_info_box">
+    <div class="bar3_day_img">
+        <p id="day7">Today</p>
+        <div class="imgday1">
+            <img id="day7_img"
+                src="https://i.fbcd.co/products/resized/resized-750-500/w003e-29-e11-mainpreview-219ac562e8eca6fb993f13b128ee462d5ca4b5084ea38df37b6b2c0db4da0645.jpg"
+                alt="img">
+            <p id="rain_perc_day7">Precipitation --%</p>
+        </div>
+    </div>
+    <div class="bar3_day_bar">
+        <p id="min_tem_day7">--°</p>
+        <div class="bar3_temp">
+            <div id="bar3_temp_fill7"></div>
+        </div>
+        <p id="max_tem_day7">--°</p>
+    </div>
+</div> -->
