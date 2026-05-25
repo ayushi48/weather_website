@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://weather-web-sk.vercel.app/photo/images.png" alt="Weather Forecast App" width="120px" />
+
 
 # 🌦️ Weather Forecast Dashboard
 
@@ -18,6 +18,20 @@
 </div>
 
 ---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td>
+      <img src="./WEATHER/weather1.jpeg" alt="Weather Screenshot 1" width="100%"/>
+    </td>
+    <td>
+      <img src="./WEATHER/weather2.jpeg" alt="Weather Screenshot 2" width="100%"/>
+    </td>
+  </tr>
+</table>
+
 
 ## 📌 Project Overview
 
@@ -91,16 +105,7 @@ Or visit the **[Live Demo →](https://weather-web-sk.vercel.app/)**
 
 ---
 
-## 🗂️ Project Structure
 
-```
-weather-forecast/
-├── index.html              # App entry point & layout
-├── photo/
-│   └── images.png          # Weather icon assets
-├── style.css               # Dark theme & dashboard styles
-└── script.js               # Weather logic, Canvas graph, DOM updates
-```
 
 ---
 
@@ -123,10 +128,10 @@ Canvas Graph Features:
 
 | Technology | Role |
 |---|---|
-| **HTML5** | Semantic layout and structure |
-| **CSS3** | Dark theme, card grid, responsive design |
-| **JavaScript (ES6+)** | Weather logic, DOM manipulation, event handling |
-| **Canvas API** | Hourly temperature graph rendering |
+| **HTML** | Semantic layout and structure |
+| **CSS** | Dark theme, card grid, responsive design |
+| **JavaScript ** | Weather logic, DOM manipulation, event handling |
+| **Weather API** | Hourly temperature graph rendering |
 | **Vercel** | Deployment and hosting |
 
 ---
